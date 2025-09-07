@@ -1,0 +1,10 @@
+[package]
+name = "guest-list-qrs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+qrcode = { version = "0.12", features = ["image"] }
+image = "0.24"
+dotenvy = "0.15"
+chrono = "0.4"
