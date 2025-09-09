@@ -11,10 +11,9 @@ const IS_TEST: bool = true;
 const IS_TEST: bool = false;
 
 pub fn generate(url: &str, tokens_csv_path: &str) -> Result<(), Box<dyn std::error::Error>> {
-    let tokens: Vec<String> = extract_tokens(tokens_csv_path)?;
+    let tokens = extract_tokens(tokens_csv_path)?;
 
     if tokens.is_empty() {
-        // Prefer returning an error over exiting in library code
         return Err("No tokens found in CSV. Add comma-separated values and try again.".into());
     }
 
@@ -55,7 +54,6 @@ fn generate_qr_svg(url: &str, token: &str) -> Result<(), Box<dyn std::error::Err
     let out_dir = if IS_TEST { "tests/out" } else { "out" };
     let filename: PathBuf = Path::new(out_dir).join(format!("{}.svg", token.to_lowercase()));
 
-    // Ensure the output directory exists
     if let Some(parent) = filename.parent() {
         fs::create_dir_all(parent)?;
     }
