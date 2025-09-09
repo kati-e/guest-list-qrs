@@ -6,7 +6,7 @@ This is a guest list QR code generator built with rust.
 
 ## Requires
 
-[Rust & Cargo]("https://www.rust-lang.org/tools/install")
+Rust & Cargo: https://www.rust-lang.org/tools/install
 
 ## Setup
 
