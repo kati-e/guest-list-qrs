@@ -30,6 +30,9 @@ target
 # Unique tokens csv
 .tokens.csv
 
+# Generated files by tests
+/tests
+
 # Added by cargo
 
 /target

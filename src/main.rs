@@ -5,7 +5,7 @@ use dotenvy::dotenv;
 use std::env;
 use std::fs;
 
-use crate::tokens::tokens::generate;
+use crate::tokens::generate;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv().ok();
