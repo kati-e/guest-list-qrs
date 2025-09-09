@@ -43,7 +43,7 @@ pub mod tokens {
         let code: QrCode = QrCode::new(data.as_bytes())?;
         let svg: String = code
             .render::<svg::Color>()
-            .min_dimensions(512, 512)
+            .min_dimensions(600, 600)
             .quiet_zone(true)
             .build();
         let filename: String = format!("out/{}.svg", token.to_lowercase());
